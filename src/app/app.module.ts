@@ -1,3 +1,5 @@
+import { ProductService } from './product.service';
+import { AuthGuardService } from './auth-guard.service';
 import { environment } from './../environments/environment';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -16,6 +18,12 @@ import { OrderSuccessComponent } from './order-success/order-success.component';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
 import { AdminProductsComponent } from './admin/admin-products/admin-products.component';
 import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.component';
+import { AdminAuthGuardService } from './admin-auth-guard.service';
+import { AuthService } from './auth.service';
+import { UserService } from './user.service';
+import { CategoryService } from './category.service';
+import { ShoppingCartService } from './shopping-cart.service';
+import { OrderService } from './order.service';
 
 @NgModule({
   declarations: [
@@ -39,23 +47,23 @@ import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.componen
       { path: '', component: ProductsComponent },
       { path: 'products', component: ProductsComponent },
       { path: 'shopping-cart', component: ShoppingCartComponent },
-      /*{ path: 'login', component: LoginComponent },
+     // { path: 'login', component: LoginComponent },
 
       { path: 'check-out', component: CheckOutComponent, canActivate:[AuthGuardService] },
       { path: 'order-success/:id', component: OrderSuccessComponent, canActivate:[AuthGuardService] },
       { path: 'my/orders', component: MyOrdersComponent, canActivate:[AuthGuardService] },
     
      
-       { 
+      /* { 
         path: 'admin/products/new',
         component: ProductFormComponent, 
         canActivate:[AuthGuardService,AdminAuthGuardService] 
-      },
+       },
        { 
         path: 'admin/products/:id',
         component: ProductFormComponent, 
         canActivate:[AuthGuardService,AdminAuthGuardService] 
-      },
+      },*/
       { 
         path: 'admin/products',
         component: AdminProductsComponent, 
@@ -65,10 +73,19 @@ import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.componen
         path: 'admin/orders', 
         component: AdminOrdersComponent, 
         canActivate:[AuthGuardService,AdminAuthGuardService] 
-      }*/
+      }
     ]) 
   ],
-  providers: [],
+  providers: [
+    AuthService,
+    AuthGuardService,
+    AdminAuthGuardService,
+    UserService,
+    CategoryService,
+    ProductService,
+    ShoppingCartService,
+    OrderService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
