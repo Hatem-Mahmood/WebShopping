@@ -61,14 +61,14 @@ import { ProductFormComponent } from './admin/product-form/product-form.componen
       { path: '', component: ProductsComponent },
       { path: 'products', component: ProductsComponent },
       { path: 'shopping-cart', component: ShoppingCartComponent },
-     // { path: 'login', component: LoginComponent },
+      { path: 'login', component: LoginComponent },
 
       { path: 'check-out', component: CheckOutComponent, canActivate:[AuthGuardService] },
       { path: 'order-success/:id', component: OrderSuccessComponent, canActivate:[AuthGuardService] },
       { path: 'my/orders', component: MyOrdersComponent, canActivate:[AuthGuardService] },
     
      
-      /* { 
+       { 
         path: 'admin/products/new',
         component: ProductFormComponent, 
         canActivate:[AuthGuardService,AdminAuthGuardService] 
@@ -77,7 +77,7 @@ import { ProductFormComponent } from './admin/product-form/product-form.componen
         path: 'admin/products/:id',
         component: ProductFormComponent, 
         canActivate:[AuthGuardService,AdminAuthGuardService] 
-      },*/
+      },
       { 
         path: 'admin/products',
         component: AdminProductsComponent, 
