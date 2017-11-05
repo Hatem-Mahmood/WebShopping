@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { ShoppingCart } from './../models/shopping-cart';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-shopping-cart-summry',
+  selector: 'shopping-cart-summry',
   templateUrl: './shopping-cart-summry.component.html',
   styleUrls: ['./shopping-cart-summry.component.css']
 })
-export class ShoppingCartSummryComponent implements OnInit {
+export class ShoppingCartSummryComponent  {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  @Input('cart') cart :ShoppingCart;
 }
