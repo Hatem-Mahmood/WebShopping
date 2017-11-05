@@ -54,10 +54,8 @@ import { ShippingFormComponent } from './shipping-form/shipping-form.component';
     ProductFilterComponent,
     ProductCardComponent,
     ProductQuantityComponent,
-    SlidShowComponent,
     ShoppingCartSummryComponent,
-    ShippingFormComponent,
-    TestComponent
+    ShippingFormComponent
   ],
   imports: [
     BrowserModule,
