@@ -24,6 +24,13 @@ import { UserService } from './user.service';
 import { CategoryService } from './category.service';
 import { ShoppingCartService } from './shopping-cart.service';
 import { OrderService } from './order.service';
+import { BsDropdownComponent } from './bs-dropdown/bs-dropdown.component';
+import { LoginComponent } from './login/login.component';
+import { ProductCardComponent } from './product-card/product-card.component';
+import { ProductQuantityComponent } from './product-quantity/product-quantity.component';
+import { ShippingFormComponent } from './shipping-form/shipping-form.component';
+import { ShoppingCartSummryComponent } from './shopping-cart-summry/shopping-cart-summry.component';
+import { ProductFormComponent } from './admin/product-form/product-form.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +43,14 @@ import { OrderService } from './order.service';
     OrderSuccessComponent,
     MyOrdersComponent,
     AdminProductsComponent,
-    AdminOrdersComponent
+    AdminOrdersComponent,
+    BsDropdownComponent,
+    LoginComponent,
+    ProductCardComponent,
+    ProductQuantityComponent,
+    ShippingFormComponent,
+    ShoppingCartSummryComponent,
+    ProductFormComponent
   ],
   imports: [
     BrowserModule,
